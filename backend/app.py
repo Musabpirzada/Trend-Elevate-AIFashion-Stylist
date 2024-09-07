@@ -9,7 +9,7 @@ from collections import defaultdict
 
 app = Flask(__name__)
 CORS(app)
-app.config["MONGO_URI"] = "mongodb+srv://trenduser:alG4JoJVNXasBfp3@trend-elevate-cluster.q6tqhnl.mongodb.net/Trend-Elevate"
+app.config["MONGO_URI"] = "" #Enter Mongodb url
 mongo = PyMongo(app)
 
 
