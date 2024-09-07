@@ -1,0 +1,193 @@
+.back{
+  height: 120vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* background: linear-gradient(to right, #552f7f, #552f7f, #552f7f); */
+  background-image: url("../../public/Login-back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  position: absolute;
+  z-index: -1;
+}
+
+.blurbg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(186, 110, 227, 0.5);
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(12px);
+}
+
+.register{
+    max-width: 1320px;
+    height: 760px;
+    width: 600vw;
+    display:flex;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    box-shadow: 1px 1px 1px #e9ecef;
+    background-color: #e9ecef;
+    position: absolute;
+    z-index: 3;
+  }
+
+  .h1{
+    font-size: medium;
+    font-family: sans-serif;
+    color: #45216d;
+  }
+
+  .register .col1{
+    margin: auto;
+    padding: 3em 0;
+  }
+
+
+  .logodiv{
+    height: 80px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    /* background-color: #45216d; */
+  }
+  .logo{
+    height: 90px;
+    width:120px;
+    border-radius: 50%;
+  }
+/* ///////////////////////////////////// */
+  /* Button Css */
+  .btndiv{
+    height: auto;
+    width : 300px;
+    z-index: 4;
+  }
+
+  .applebtn, .googlebtn, .windowsbtn{
+    height: 42px;
+    width: 100%;
+    background-color: #5d2991;
+    border: 1px solid #5d2991;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-items:flex-start;
+    
+  }
+
+  .appleimg, .googleimg, .windowsimg {
+    margin-top: 6px;
+    width: 40px;
+    height: 25px;
+  }
+
+  .AppleN, .GoogleN, .WindowsN{
+    font-size: medium;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: #e9ecef;
+    margin-top: 10px;
+  }
+/* ////////////////////////////////////////////// */
+
+/* Divider */
+.divider{
+  height: 30px;
+  width: auto;
+  margin-top: 25px;
+}
+
+.solid{
+  border-top: 1px solid gray;
+}
+
+.divcircle{
+  margin-top: -12px;
+  margin-left: 47%;
+  width: 27px;
+  height: 27px;
+  line-height: 25px;
+  border-radius: 50%;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  background-color: #45216d;
+}
+
+.AccSign{
+  height: 35px;
+  border-radius: 5px;
+  border: 3px solid #ffd60a;
+  color: #45216d;
+  /* background-color: #45216d; */
+  text-align: center;
+  padding-top: 6px;
+  font-size: small;
+}
+
+
+/* /////////////////////////////////////// */
+/* Input fields form */
+.inputs{
+  margin-top: 10px;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.inputs > input {
+  border-radius: 7px;
+  padding: .7em 1em;
+  outline: none;
+  border: 1px solid #e9ecef;
+}
+
+.signbtn{
+  border: 1px solid #5d2991;
+  padding: .9em 1em;
+  border-radius: 7px;
+  background-color: #5d2991;
+  color: #e9ecef;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.toLogin{
+  height: 20px;
+  margin-top: 8px;
+  font-size:85%;
+  color: #45216d;
+}
+
+/* ////////////////////////////////////// */
+
+  .register .col2 .imgback{
+    object-fit: cover;
+    align-self: flex-end;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  .imgback{
+    height: 760px;
+    width: 900px;
+  }
+
+  .error{
+    color: red;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    display: flex;
+    justify-content: left;
+    font-size: 13px;
+    padding-left: 15px;
+  }

@@ -1,0 +1,39 @@
+.logo {
+    flex: 1;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5d2991;
+    padding: 10px;
+    color: white;
+    height: 80px;
+}
+.nav {
+    display: flex;
+    gap: 20px;
+}
+.menu {
+    text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.menu:hover {
+    background-color: #c77dff;
+  }
+.logoimage {
+    max-width: 7%;
+    max-height: 100%;
+}
+.signInButton {
+    background-color: #fdc500;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }

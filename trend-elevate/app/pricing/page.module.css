@@ -1,0 +1,95 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  font-family: sans-serif;
+  background-color: #e9ecef;
+}
+
+.heading {
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.subheading{
+  color: rgb(104, 104, 104);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.plans {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 200px; /* Spacing between cards */
+}
+
+.plan {
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0px 3px 5px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 500px;
+  width: 500px ;
+  background-color: #e9ecef; 
+}
+
+.planTitle {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.planPrice {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.planFeatures {
+  list-style: none;
+  padding-inline-start: 1px;
+  padding-inline-end: 1px;
+  margin-top: 12%;
+  font-size: 16px;
+  line-height: 2.4;
+  text-align: left;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.modeltitle{
+  text-align: center;
+}
+.divider{
+  border-top: 1px solid gray;
+  padding-bottom: 10px;
+}
+
+.planFeaturesdiv {
+  width: 320px;
+  border-radius: 15px;
+  border: 2px solid rgba(176, 32, 208, 0.6);
+  margin-left: 80px;
+  height: 350px;
+  margin-top: 8px;
+}
+
+.planButton {
+  background-color: rgba(143, 3, 174, 0.6);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.planButton:hover {
+  background-color: rgba(176, 32, 208, 0.6);
+}
+
+.planFeatured {
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+}

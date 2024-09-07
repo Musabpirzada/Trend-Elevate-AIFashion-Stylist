@@ -1,0 +1,20 @@
+.back{
+    background-image: url("../../public/Login-back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    z-index: -1;
+}
+
+.blurbg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(186, 110, 227, 0.5);
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(12px);
+  }
+  

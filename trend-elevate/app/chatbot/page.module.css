@@ -1,0 +1,112 @@
+.newchatbtn{
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #7247a3;
+    text-align: left;
+    border-radius: 6px;
+    transition: ease 0.25s all;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.newchatbtn:hover{
+    background-color: rgba(112, 36, 184, 0.8);
+}
+
+.botimg{
+    border-radius: 50%;
+}
+.userimg{
+    border-radius: 50%;
+}
+
+
+.chatbox{
+    height: 77vh;
+    width: 160vh;
+    border: 1px solid #F3F3FF;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: relative; */
+    overflow: auto;
+    border-radius: 24px;
+    scrollbar-width: none;
+}
+
+.chatinputholder{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.chatinputtextarea{
+    background-color: #e9ecef;
+    width: 75%;
+    border-radius: 5px;
+    border-color: none;
+    margin: 10px;
+    font-size: 1em;
+    padding: 10px;
+    outline: none;
+    resize: none;
+}
+
+.chatlog{
+    /* padding: 24px; */
+    text-align: left;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatmsg{
+    width: 100%;
+    color: #e9ecef;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+}
+
+.chatmsgbot{
+    width: 100%;
+    color: #e9ecef;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.chatmsgcenter{
+    padding: 12px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.avatar{
+    background-color: #e9ecef;
+    border-radius: 50%;
+    min-width: 40px;
+    height: 40px;
+}
+.avatarbot{
+    background-color: #3f265c;
+    border-radius: 50%;
+    min-width: 40px;
+    height: 40px;
+}
+
+.message{
+    padding: 12px;
+    max-width: 85%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    /* word-break: break-all; */
+}

@@ -1,0 +1,30 @@
+.active{
+  color:#e9ecef;
+}
+
+.activeicon {
+  color:rgb(153, 70, 231) !important;
+}
+
+
+.sidebaritems{
+  color: rgb(148, 148, 148);
+  font-size: large;
+  width: 150px;
+}
+
+.sidebaritems:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.sidebaritems p {
+  margin-left: 1em;
+}
+
+.sidebaritems:hover p {
+  color :#e9ecef;
+}
+
+.sidebaritems:hover svg {
+  color: rgb(153, 70, 231);
+}
