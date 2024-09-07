@@ -33,3 +33,31 @@
   <li><strong>𝘙𝘈𝘎 (𝘙𝘦𝘵𝘳𝘪𝘦𝘷𝘢𝘭-𝘈𝘶𝘨𝘮𝘦𝘯𝘵𝘦𝘥 𝘎𝘦𝘯𝘦𝘳𝘢𝘵𝘪𝘰𝘯):</strong> Enhancing the chatbot's ability to access relevant information before generating responses, ensuring fashion advice is contextually accurate and timely.</li>
   <li><strong>𝘔𝘰𝘥𝘦𝘭 𝘖𝘱𝘵𝘪𝘮𝘪𝘻𝘢𝘵𝘪𝘰𝘯:</strong> Leveraging Lora and quantization techniques to fine-tune performance, enhancing the speed of the recommendation system.</li>
 </ul>
+
+<h2>🚀 Getting Started</h2>
+
+<p>Follow these steps to set up the project on your local machine:</p>
+
+<h3>1. Frontend Setup</h3>
+<ol>
+  <li>Navigate to the <code>trendelevate</code> folder:</li>
+  <pre><code>cd trendelevate</code></pre>
+
+  <li>Install the required packages using <code>npm</code>:</li>
+  <pre><code>npm install</code></pre>
+
+  <li>Start the development server:</li>
+  <pre><code>npm run dev</code></pre>
+</ol>
+
+<h3>2. Backend Setup</h3>
+<ol>
+  <li>In a new terminal, navigate to the <code>backend</code> folder:</li>
+  <pre><code>cd backend</code></pre>
+
+  <li>Run the Flask backend server:</li>
+  <pre><code>python app.py</code></pre>
+</ol>
+
+<p>Once both the frontend and backend are running, you can access the application in your browser at <code>http://localhost:3000</code>.</p>
+
