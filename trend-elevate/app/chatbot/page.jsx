@@ -134,9 +134,30 @@ export default function chatbot() {
     setActiveChat(chats.length)
   };
 
-  const handleChatClick = (index) => {
+  const handleChatClick = async (index) => {
     setActiveChat(index);
-  };
+    const selectedchat = chats[index];
+
+    try{
+      const response = await axios.get(`${backendUrl}/getmessages`,{
+        params:{
+          chatname: selectedchat.name,
+        },
+      });
+
+      const formattedMessages = response.data.messages.flatMap((msg) => [
+        {role: 'user', content : msg.user_message},
+        {role: 'bot', content : msg.bot_response},
+      ]);
+
+      setMessages(formattedMessages);
+      console.log(formattedMessages);
+    }catch(error) {
+      console.log("Error fetching messages:", error);
+      // toast.error("Failed to fetch messages");
+    }
+
+  }
 
   // ---------------------------------------------
   const getUserChats = async () => {
@@ -147,8 +168,8 @@ export default function chatbot() {
         return;
       }
       const userId = user.uid;
-      const response = await axios.post(`${backendUrl}/retrievechats`, {
-          userId: userId
+      const response = await axios.get(`${backendUrl}/retrievechats`, {
+          params:{userId: userId}
       });
       const userChats = response.data.chats;
       setChats(userChats);
@@ -497,6 +518,8 @@ export default function chatbot() {
                 </div>
               </div>
             ))}
+            {/* Debugging output
+            {messages.length === 0 && <p>No messages to display</p>} */}
           </div>
         </section>
         
