@@ -5,11 +5,11 @@ from chatbot import generate_response
 from imageGen import generate_image
 import re
 from datetime import datetime
-from collections import defaultdict
+from urllib.parse import unquote
 
 app = Flask(__name__)
 CORS(app)
-app.config["MONGO_URI"] = "" #Enter Mongodb url
+app.config["MONGO_URI"] = "mongodb+srv://trenduser:alG4JoJVNXasBfp3@trend-elevate-cluster.q6tqhnl.mongodb.net/Trend-Elevate"
 mongo = PyMongo(app)
 
 
@@ -24,7 +24,25 @@ def receive_chats():
                 return jsonify({'success': True, 'chats': 'Chats stored successfully'}), 200
         except Exception as e:
             return jsonify({'success': False, 'error': str(e)}), 500
+
+
+@app.route('/api/retrievechats', methods=['GET'])
+def get_user_chats():
+    try:
+        user_id = request.args.get('userId')
+
+        if not user_id:
+            return jsonify({'success': False, 'error': 'userId parameter is required'}), 400
         
+        userchats = list(mongo.db.chats.find({'userId': user_id}))
+        # Serialize the MongoDB ObjectId to a string
+        for chat in userchats:
+            chat['_id'] = str(chat['_id'])
+
+        return jsonify({'success': True, 'chats': userchats}), 200
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)}), 500
+
 
 @app.route('/api/messages', methods=['POST'])
 def receive_message():
@@ -48,21 +66,29 @@ def receive_message():
         return jsonify({'success': False, 'error': str(e)}), 500
 
 
+@app.route('/api/getmessages', methods=['GET'])
+def get_message():
+    chatname = request.args.get('chatname')
 
-@app.route('/api/retrievechats', methods=['POST'])
-def get_user_chats():
+    if not chatname:
+        return jsonify({"error": "chatname parameter is required"}),400
+    
+    # chatname = unquote(chatname)
+    # print(f"Decoded chatname: '{chatname}'")
     try:
-        data = request.json
-        user_id = data.get('userId')
-        userchats = list(mongo.db.chats.find({'userId': user_id}))
-        
-        # Serialize the MongoDB ObjectId to a string
-        for chat in userchats:
-            chat['_id'] = str(chat['_id'])
+        messages = list(mongo.db.conversation.find({'chatName': chatname}))
 
-        return jsonify({'success': True, 'chats': userchats}), 200
+        formatted_message = [{
+            "user_message": msg.get("user_message", ""),
+            "bot_response": msg.get("bot_response", "")
+        }
+        for msg in messages
+        ]
+        # print(formatted_message)
+        return jsonify({"messages": formatted_message}), 200
     except Exception as e:
-        return jsonify({'success': False, 'error': str(e)}), 500
+        print(f"Error fetching messages: {e}")
+        return jsonify({"error": "Failed to fetch messages"}), 500
 
 
 
@@ -110,6 +136,7 @@ def get_user_Images():
 
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)}), 500
+
 
 
 @app.route('/api/trend-counts', methods=['GET'])
